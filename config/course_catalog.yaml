@@ -78,6 +78,14 @@ colliders:
     enabled: true
 
 processes:
+  ee_mumu_qed:
+    label: "Photon-only: e+ e- → μ+ μ- (instructor validation pending)"
+    collider_ids: [lep91, higgs240]
+    model_ids: [sm]
+    madgraph_lines:
+      - generate e+ e- > mu+ mu- / z h
+    full_pipeline: false
+    enabled: false
   dy_ll:
     label: "Drell–Yan: p p → e+ e- or μ+ μ-"
     collider_ids: [lhc13]

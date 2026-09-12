@@ -1,6 +1,9 @@
 # PHYS 225A — Finding Z course materials
 
-Initial repository layout; MIT selected for original material, not yet published.
+Course materials repository; MIT selected for original material.
+
+The seven draft 225A practicals are indexed in [exercises/README.md](exercises/README.md).
+Their sample-generation recipes are preparation plans, not released datasets.
 
 - `config/course_catalog.yaml`: models, colliders, processes, detectors and samples.
 - `config/analysis_variables.yaml`: plotting and selection variables by process.
