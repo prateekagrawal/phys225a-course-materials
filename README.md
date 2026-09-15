@@ -1,30 +1,34 @@
-# PHYS 225A — Finding Z course materials
+# PHYS 225A — FindingZ practicals
 
-Course materials repository; MIT selected for original material.
+Use FindingZ to generate samples and explore distributions, then use JupyterLab
+for calculations and written explanations.
 
-The seven draft 225A practicals are indexed in [exercises/README.md](exercises/README.md).
-Their sample-generation recipes are preparation plans, not released datasets.
+## Start here
 
-- `config/course_catalog.yaml`: models, colliders, processes, detectors and samples.
-- `config/analysis_variables.yaml`: plotting and selection variables by process.
-- `notebooks/`: editable student analysis templates, including object definitions.
-- `datasets/`: dataset documentation; large data live on CIT shared storage.
+1. Open JupyterLab and choose **Python (hep)** as the notebook kernel.
+2. Create a `work` folder in your home directory if you do not have one.
+3. Copy the assigned notebook from [the exercise list](exercises/README.md)
+   into `work` before editing. Leave the originals in `course-materials` unchanged.
+4. Run the notebook from the top. Choose samples from its sample table using the
+   requirements in your assignment.
 
-Point FINDINGZ_CATALOG_PATH and FINDINGZ_VARIABLES_PATH at this checkout. The
-application is installed separately from the Finding Z repository in Conda `hep`.
-Keep student run outputs and edited notebooks in persistent student storage,
-outside the centrally updated checkout. Copy missing templates to student storage
-without overwriting existing work. Select available samples explicitly in notebooks.
+For your own analysis, copy [the analysis starter](notebooks/07_simple_analysis.ipynb)
+into `work`, or save your current analysis from FindingZ and open it in JupyterLab.
+FindingZ shows where it saved the notebook.
 
-No prepared event samples are included initially. Register approved complete run
-directories in the catalog after storage paths and provenance are agreed. The
-notebook counting exercise requires at least two compatible samples.
+## Save and submit
 
-Instructors may enable/disable entries without rebuilding the Python application.
-Updating Git alone is insufficient: CIT must pull/sync the deployed checkout.
-Validate edited configurations before release and test selected detector cards.
+Save your notebook with its code, outputs, plots, and written answers. Download
+the `.ipynb` file from JupyterLab. If FindingZ also saved a matching
+`.settings.json` file, keep and submit it with the notebook.
+Include sample IDs, cuts, units, and any assumptions needed to interpret your results.
+Event files are stored separately; do not delete runs used by your analysis.
 
-MIT is approved for original teaching material. LICENSE uses the instructor-selected
-attribution "Prateek Agrawal, UCSB"; confirm ownership/authority before publication.
-Third-party material retains its upstream terms. Do not add private course records, student submissions, credentials,
-or third-party data without the appropriate permission and provenance.
+Use the course update link to refresh these materials. Continue working in your
+own copies in `work`; updates do not revise those copies.
+
+## Reference
+
+- [Exercises](exercises/README.md)
+- [Samples](datasets/README.md)
+- [License](LICENSE) and [attribution](PROVENANCE.md)

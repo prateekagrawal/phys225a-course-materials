@@ -1,14 +1,7 @@
 schema_version: 1
 title: Finding Z — PHYS 225A
 
-# Any dataset, model, collider, or process can use:
-#   enabled: false
-#   available_from: 2026-10-15
-#   available_until: 2026-11-15
-
 features:
-  # Instructor-only smoke-test/fallback. Set true to expose it temporarily;
-  # normal student simulation starts with the MadGraph collider workflow.
   toy_generator: false
   prepared_data_analysis: true
   madgraph_only: true
@@ -24,7 +17,6 @@ models:
   loop_sm:
     label: Standard Model (loop-ready UFO)
     madgraph_name: loop_sm
-    # Keep installed for instructor tests; do not present it as a standard course choice.
     enabled: false
   blackbox_1:
     label: Black-box model 1
@@ -79,7 +71,7 @@ colliders:
 
 processes:
   ee_mumu_qed:
-    label: "Photon-only: e+ e- → μ+ μ- (instructor validation pending)"
+    label: "Photon-only: e+ e- → μ+ μ-"
     collider_ids: [lep91, higgs240]
     model_ids: [sm]
     madgraph_lines:
