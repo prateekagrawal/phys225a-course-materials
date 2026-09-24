@@ -1,8 +1,9 @@
 # Analysis template
 
-FindingZ uses this notebook to create a new analysis. To begin, save an analysis
-from FindingZ, or copy [the standalone starter](../07_simple_analysis.ipynb)
-into your `work` folder. Do not edit this shared template for your assignment.
+FindingZ uses this notebook to create exported analyses. It is application
+support, not an additional assignment. For Problem Set 0, use
+[the exercise notebook](../exercises/00_pset0_q4_qed_comparison.ipynb).
+Do not edit this shared template for your assignment.
 
 In your own copy, choose samples, edit the plotting and selection settings, and
 write your interpretation beneath the results. Run cells from the top and save

@@ -1,34 +1,19 @@
-# PHYS 225A — FindingZ practicals
+# PHYS 225A — Problem Set 0
 
-Use FindingZ to generate samples and explore distributions, then use JupyterLab
-for calculations and written explanations.
+Start with [Problem Set 0, Question 4: compare QED with MARK II and FindingZ](notebooks/exercises/00_pset0_q4_qed_comparison.ipynb).
 
-## Start here
+1. Generate your sample in FindingZ using the settings given in the notebook.
+2. Copy the notebook into a `work` folder in your JupyterLab home directory.
+   Name your copy `pset0_q4_<name>.ipynb`. Leave the course original unchanged.
+3. Select **Python (hep)** on CIT, run the cells in order, and choose your sample
+   from the table. Complete the exercise in your copy.
+4. Save with the outputs and plots, download the `.ipynb` file from JupyterLab,
+   and include it with your problem-set submission.
 
-1. Open JupyterLab and choose **Python (hep)** as the notebook kernel.
-2. Create a `work` folder in your home directory if you do not have one.
-3. Copy the assigned notebook from [the exercise list](exercises/README.md)
-   into `work` before editing. Leave the originals in `course-materials` unchanged.
-4. Run the notebook from the top. Choose samples from its sample table using the
-   requirements in your assignment.
+Keep the simulation run used by your notebook: event files are stored separately
+and are not embedded in the notebook. See [sample storage](datasets/README.md).
 
-For your own analysis, copy [the analysis starter](notebooks/07_simple_analysis.ipynb)
-into `work`, or save your current analysis from FindingZ and open it in JupyterLab.
-FindingZ shows where it saved the notebook.
+The `config` directory and `notebooks/templates` support FindingZ; they are not
+additional assignments. Course updates do not update your personal copy in `work`.
 
-## Save and submit
-
-Save your notebook with its code, outputs, plots, and written answers. Download
-the `.ipynb` file from JupyterLab. If FindingZ also saved a matching
-`.settings.json` file, keep and submit it with the notebook.
-Include sample IDs, cuts, units, and any assumptions needed to interpret your results.
-Event files are stored separately; do not delete runs used by your analysis.
-
-Use the course update link to refresh these materials. Continue working in your
-own copies in `work`; updates do not revise those copies.
-
-## Reference
-
-- [Exercises](exercises/README.md)
-- [Samples](datasets/README.md)
-- [License](LICENSE) and [attribution](PROVENANCE.md)
+[License](LICENSE) · [Attribution](PROVENANCE.md)
