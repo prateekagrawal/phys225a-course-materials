@@ -1,6 +1,6 @@
 # PHYS 225A — Problem Set 0
 
-Start with [Problem Set 0, Question 4: compare QED with MARK II and FindingZ](notebooks/exercises/00_pset0_q4_qed_comparison.ipynb).
+Start with [Problem Set 0, Question 4: compare QED with MARK II and FindingZ](exercises/00_pset0_q4_qed_comparison.ipynb).
 
 1. Generate your sample in FindingZ using the settings given in the notebook.
 2. Copy the notebook into a `work` folder in your JupyterLab home directory.
