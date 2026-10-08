@@ -1,0 +1,31 @@
+# Example additions to course_catalog.yaml, not a standalone catalogue.
+# Merge these blocks only after deploying FindingZ with schema-2 support.
+# Blank student edits preserve existing physics defaults.
+schema_version: 2
+minimum_findingz_version: "0.2.0"
+
+run_card:
+  defaults: {}
+  editable: [ptl, etal, drll, mmll, mmllmax]
+
+# Merge param_card into these existing models; retain their other fields.
+models:
+  sm:
+    param_card:
+      editable: ["mass 23", "decay 23", "sminputs 1"]
+  qed_dilepton:
+    param_card:
+      editable: ["sminputs 1"]
+
+# Full-pipeline editors start from the installed shower/selected detector card.
+# Optional path supplies a course-owned replacement, relative to the catalogue.
+shower_card:
+  editable: true
+  # path: ../cards/pythia8_card.dat
+detector_card:
+  editable: true
+  # path: ../cards/delphes_card.tcl
+
+# A process may supply its own blocks, replacing these policies for that process.
+# An empty block disables that customization; parameter policy can also be set
+# on a model. Precedence for parameters: process, model, course.

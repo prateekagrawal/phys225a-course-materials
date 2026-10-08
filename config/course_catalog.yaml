@@ -1,6 +1,16 @@
-schema_version: 1
+schema_version: 2
 minimum_findingz_version: "0.2.0"
-title: Finding Z — PHYS 225A
+title: Finding Z — PHYS 225A (testing)
+
+# Requires FindingZ commit c58d13a or a compatible later build.
+# Expose edits without changing the default physics settings.
+run_card:
+  defaults: {}
+  editable: [ptl, etal, drll, mmll, mmllmax]
+shower_card:
+  editable: true
+detector_card:
+  editable: true
 
 features:
   toy_generator: false
@@ -23,11 +33,15 @@ models:
     label: Standard Model (tree level)
     madgraph_name: sm
     enabled: true
+    param_card:
+      editable: ["mass 23", "decay 23", "sminputs 1"]
   # A restricted hypothesis, not a separate UFO: its process cards exclude Z/H.
   qed_dilepton:
     label: QED only (dilepton processes)
     madgraph_name: sm
     enabled: true
+    param_card:
+      editable: ["sminputs 1"]
   loop_sm:
     label: Standard Model (loop-ready UFO)
     madgraph_name: loop_sm

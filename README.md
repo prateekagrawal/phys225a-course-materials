@@ -16,4 +16,16 @@ and are not embedded in the notebook. See [sample storage](datasets/README.md).
 The `config` directory and `notebooks/templates` support FindingZ; they are not
 additional assignments. Course updates do not update your personal copy in `work`.
 
+Optional run, parameter, shower and detector card editing is demonstrated in
+[card_customization.example.yaml](config/card_customization.example.yaml).
+This `codex/testing` branch enables these editors with schema 2. It requires
+FindingZ commit `c58d13a` or a compatible later build; the version label `0.2.0`
+alone does not identify that build. The student branch `codex/initial-layout`
+is unchanged. Validate on the CIT test server before promoting these changes.
+The `run_card`, `param_card`, `shower_card` and
+`detector_card` blocks control available edits; a process can override a course
+policy, and model entries can supply their own parameter policy. Card paths are
+relative to the catalogue. Detailed configuration and scripted-run examples live
+in FindingZ's `deploy/EXTERNAL-COURSE-CONTENT.md`.
+
 [License](LICENSE) · [Attribution](PROVENANCE.md)
