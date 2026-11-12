@@ -29,3 +29,16 @@ relative to the catalogue. Detailed configuration and scripted-run examples live
 in FindingZ's `deploy/EXTERNAL-COURSE-CONTENT.md`.
 
 [License](LICENSE) · [Attribution](PROVENANCE.md)
+
+## Problem Set 2: W transverse mass
+
+The `w_enu` process uses the electron plus missing-momentum variables
+`mt_e_met` (transverse mass) and `pt_e_met` (reconstructed W transverse momentum).
+The course variable catalog exposes these in FindingZ, together with electron and
+muon multiplicities, electron pT/eta, and missing transverse momentum.
+
+This requires the matching FindingZ extraction update, not only a course sync.
+Reinstall/rebuild FindingZ and restart it after updating the app source; then sync
+these course files. Generate a new full-pipeline W run (use a new seed to avoid
+reusing an old cached run). Old CSV summaries lack the new columns and are not
+automatically backfilled. The companion notebook remains an optional alternative.

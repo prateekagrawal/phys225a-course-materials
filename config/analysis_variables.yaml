@@ -3,6 +3,46 @@ schema_version: 1
 # Leading/subleading lepton columns are derived from the saved pair on load.
 # Slider ranges cover the selected samples; initially the whole range is selected.
 variables:
+  n_electron:
+    column: n_electron
+    label: Number of electrons
+    description: Number of stored electrons.
+    step: 1.0
+  n_muon:
+    column: n_muon
+    label: Number of muons
+    description: Number of stored muons.
+    step: 1.0
+  leading_electron_pt:
+    column: leading_electron_pt
+    label: Leading electron pt [GeV]
+    description: pt of the leading electron ranked by transverse momentum; undefined
+      when absent.
+    step: 1.0
+  leading_electron_eta:
+    column: leading_electron_eta
+    label: Leading electron eta
+    description: eta of the leading electron ranked by transverse momentum; undefined
+      when absent.
+    step: 0.1
+  met:
+    column: met
+    label: Missing transverse momentum [GeV]
+    description: Delphes reconstructed missing transverse momentum magnitude.
+    step: 1.0
+  mt_e_met:
+    column: mt_e_met
+    label: Electron + missing pT transverse mass [GeV]
+    description: Massless transverse mass of the leading reconstructed electron and
+      Delphes missing momentum. Undefined if either is absent. Use exactly one electron
+      for W decay.
+    step: 1.0
+  pt_e_met:
+    column: pt_e_met
+    label: Reconstructed W transverse momentum [GeV]
+    description: Magnitude of the vector sum of leading electron and Delphes missing
+      transverse momentum. A W recoil estimator for single-electron W events.
+    step: 1.0
   mll:
     column: mll
     label: Dilepton invariant mass [GeV]
@@ -32,6 +72,7 @@ variables:
 # Default observables when a process-specific list is not available.
 default_variables: &dilepton [mll, leading_lepton_pt, subleading_lepton_pt, leading_lepton_eta, subleading_lepton_eta]
 processes:
+  w_enu: [n_electron, n_muon, leading_electron_pt, leading_electron_eta, met, mt_e_met, pt_e_met]
   dy_ll: *dilepton
   dy_ee: *dilepton
   dy_mumu: *dilepton
