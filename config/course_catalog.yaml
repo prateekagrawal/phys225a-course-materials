@@ -114,6 +114,15 @@ processes:
       - add process p p > w-, w- > e- ve~
     full_pipeline: true
     enabled: true
+  wj_enu:
+    label: "W + jet -> e nu + jet (both charges)"
+    collider_ids: [lhc13]
+    model_ids: [sm]
+    madgraph_lines:
+      - generate p p > w+ j, w+ > e+ ve
+      - add process p p > w- j, w- > e- ve~
+    full_pipeline: true
+    enabled: true
   ee_mumu_qed:
     label: "e+ e- → μ+ μ-"
     collider_ids: [markii29]

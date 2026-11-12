@@ -32,13 +32,14 @@ in FindingZ's `deploy/EXTERNAL-COURSE-CONTENT.md`.
 
 ## Problem Set 2: W transverse mass
 
-The `w_enu` process uses the electron plus missing-momentum variables
-`mt_e_met` (transverse mass) and `pt_e_met` (reconstructed W transverse momentum).
-The course variable catalog exposes these in FindingZ, together with electron and
-muon multiplicities, electron pT/eta, and missing transverse momentum.
+Generate 1,000 MadGraph-only events for each of `w_enu` and `wj_enu`.
+For the W + jet sample set `ptj = 30` GeV in the run card; keep other cuts
+consistent and record them. Use the saved LHE or compressed LHE files in
+[the companion notebook](notebooks/templates/02_w_transverse_mass.ipynb).
 
-This requires the matching FindingZ extraction update, not only a course sync.
-Reinstall/rebuild FindingZ and restart it after updating the app source; then sync
-these course files. Generate a new full-pipeline W run (use a new seed to avoid
-reusing an old cached run). Old CSV summaries lack the new columns and are not
-automatically backfilled. The companion notebook remains an optional alternative.
+Students implement transverse mass, compare the electron pT distribution with
+an isotropic Jacobian reference, and test mass estimators when the W recoils.
+The notebook handles file loading and plotting with numpy and matplotlib.
+It reads electron and neutrino momenta directly, with no Delphes or FindingZ
+code update required. FindingZ's course plot menu exposes existing electron
+observables; the transverse-mass and truth-mass plots are made in the notebook.

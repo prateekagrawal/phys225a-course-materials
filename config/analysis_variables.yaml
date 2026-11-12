@@ -30,19 +30,6 @@ variables:
     label: Missing transverse momentum [GeV]
     description: Delphes reconstructed missing transverse momentum magnitude.
     step: 1.0
-  mt_e_met:
-    column: mt_e_met
-    label: Electron + missing pT transverse mass [GeV]
-    description: Massless transverse mass of the leading reconstructed electron and
-      Delphes missing momentum. Undefined if either is absent. Use exactly one electron
-      for W decay.
-    step: 1.0
-  pt_e_met:
-    column: pt_e_met
-    label: Reconstructed W transverse momentum [GeV]
-    description: Magnitude of the vector sum of leading electron and Delphes missing
-      transverse momentum. A W recoil estimator for single-electron W events.
-    step: 1.0
   mll:
     column: mll
     label: Dilepton invariant mass [GeV]
@@ -72,7 +59,8 @@ variables:
 # Default observables when a process-specific list is not available.
 default_variables: &dilepton [mll, leading_lepton_pt, subleading_lepton_pt, leading_lepton_eta, subleading_lepton_eta]
 processes:
-  w_enu: [n_electron, n_muon, leading_electron_pt, leading_electron_eta, met, mt_e_met, pt_e_met]
+  w_enu: [n_electron, leading_electron_pt, leading_electron_eta]
+  wj_enu: [n_electron, leading_electron_pt, leading_electron_eta]
   dy_ll: *dilepton
   dy_ee: *dilepton
   dy_mumu: *dilepton
