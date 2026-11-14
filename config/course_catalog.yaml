@@ -92,7 +92,7 @@ colliders:
 
 processes:
   w_enu:
-    label: "W -> e nu (both charges)"
+    label: "p p -> W -> e nu (both charges)"
     collider_ids: [lhc13]
     model_ids: [sm]
     madgraph_lines:
@@ -101,7 +101,7 @@ processes:
     full_pipeline: true
     enabled: true
   wj_enu:
-    label: "W + jet -> e nu + jet (both charges)"
+    label: "p p -> W + jet -> e nu + jet (both charges)"
     collider_ids: [lhc13]
     model_ids: [sm]
     madgraph_lines:
