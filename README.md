@@ -17,3 +17,17 @@ The `config` directory and `notebooks/templates` support FindingZ; they are not
 additional assignments. Course updates do not update your personal copy in `work`.
 
 [License](LICENSE) · [Attribution](PROVENANCE.md)
+
+## Problem Set 2: W transverse mass
+
+Generate 1,000 MadGraph-only events for each of `w_enu` and `wj_enu`.
+For the W + jet sample set `ptj = 30` GeV in the run card; keep other cuts
+consistent and record them. Use the saved LHE or compressed LHE files in
+[the companion notebook](notebooks/templates/02_w_transverse_mass.ipynb).
+
+Students implement transverse mass, compare the electron pT distribution with
+an isotropic Jacobian reference, and test mass estimators when the W recoils.
+The notebook handles file loading and plotting with numpy and matplotlib.
+It reads electron and neutrino momenta directly, with no Delphes or FindingZ
+code update required. FindingZ's course plot menu exposes existing electron
+observables; the transverse-mass and truth-mass plots are made in the notebook.
